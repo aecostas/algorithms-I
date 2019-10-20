@@ -1,0 +1,6 @@
+javac -cp .:algs4.jar Percolation.java
+
+
+java -cp .:algs4.jar PercolationStats 3 2
+
+zip percolation.zip Percolation.java PercolationStats.java

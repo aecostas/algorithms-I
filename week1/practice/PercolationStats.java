@@ -3,9 +3,9 @@ import edu.princeton.cs.algs4.StdStats;
 import edu.princeton.cs.algs4.StdOut;
 
 public class PercolationStats {
+    private static final double THRESHOLD = 1.96;
 
     private final int trials;
-    private static final double cTHRESHOLD = 1.96;
     private final double mean;
     private final double stddev;
 
@@ -83,12 +83,12 @@ public class PercolationStats {
 
     // low endpoint of 95% confidence interval
     public double confidenceLo() {
-        return this.mean() - (cTHRESHOLD * this.stddev())/Math.sqrt(this.trials);
+        return this.mean() - (THRESHOLD * this.stddev())/Math.sqrt(this.trials);
     }
 
     // high endpoint of 95% confidence interval
     public double confidenceHi() {
-        return this.mean() + (cTHRESHOLD * this.stddev())/Math.sqrt(this.trials);
+        return this.mean() + (THRESHOLD * this.stddev())/Math.sqrt(this.trials);
     }
 
     // test client (see below)
